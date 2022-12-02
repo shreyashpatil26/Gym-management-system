@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <style type="text/css">
+    #inputbtn:hover{cursor:pointer;}
+  </style>
+  <body style="background:url('images/4.jpg'); background-size: cover;">
+    <div class="container-fluid" style="margin-top:60px;margin-bottom:60px;color:#34495E;">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/cardback.jpg" class="card-img-top">
+            <div class="card-body">
+              <center>
+              <h5>Admin Login</h5><br>
+              <form class="form-group" method="POST" action="admin-panel.php">
+                <div class="row">
+                  <div class="col-md-4"><label>Username: </label></div>
+                  <div class="col-md-8"><input type="text" name="username" class="form-control" placeholder="enter username" required/></div><br><br>
+                  <div class="col-md-4"><label>Password: </label></div>
+                  <div class="col-md-8"><input type="password" class="form-control" name="password" placeholder="enter password" required/></div><br><br><br>
+                </div>
+                <center><input type="submit" id="inputbtn" name="login_submit" value="Login" class="btn btn-primary"></center>
+              </form>
+            
+              
+            </center>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-7"></div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
+MIT License
+
+Copyright (c) 2019 Prashant Mani
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-- phpMyAdmin SQL Dump
+-- version 4.7.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Nov 23, 2017 at 08:01 AM
+-- Server version: 10.1.28-MariaDB
+-- PHP Version: 7.1.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `loginsystem`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctorapp`
+--
+
+CREATE TABLE `doctorapp` (
+  `fname` varchar(40) NOT NULL,
+  `lname` varchar(40) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `contact` varchar(40) NOT NULL,
+  `docapp` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doctorapp`
+--
+
+INSERT INTO `doctorapp` (`fname`, `lname`, `email`, `contact`, `docapp`) VALUES
+('Raj', 'kumar', 'kumar@gmail.com', '201', '101'),
+('saurabh', 'kumar', 'kumar121@gmail.com', '202', '102'),
+('surya', 'raj', 'raj1242gmail.com', '203', '101'),
+('Raman', 'kumar', 'raman@gmail.com', '204', '103'),
+('Aadarsh', 'thakur', 'thakur@gmail.com', '205', '103'),
+('Rahul', 'kumar', 'rahul@gmail.com', '206', '102'),
+('Sanjeev', 'Verma', 'verma12@gmail.com', '207', '103');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logintb`
+--
+
+CREATE TABLE `logintb` (
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `logintb`
+--
+
+INSERT INTO `logintb` (`username`, `password`) VALUES
+('admin', 'pass');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Package`
+--
+
+CREATE TABLE `Package` (
+  `Package_id` varchar(40) NOT NULL,
+  `Package_name` varchar(40) NOT NULL,
+  `Amount` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Package`
+--
+
+INSERT INTO `Package` (`Package_id`, `Package_name`, `Amount`) VALUES
+('121', 'preliminary', 800),
+('122', 'Wt. gain', 1500),
+('123', 'Wt.loss', 1000);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Payment`
+--
+
+CREATE TABLE `Payment` (
+  `Payment_id` int(10) NOT NULL,
+  `Amount` int(20) NOT NULL,
+  `customer_id` varchar(20) NOT NULL,
+  `payment_type` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Payment`
+--
+
+INSERT INTO `Payment` (`Payment_id`, `Amount`, `customer_id`, `payment_type`) VALUES
+(301, 1500, '201', 'cash'),
+(302, 800, '202', 'card'),
+(303, 1000, '203', 'cheque'),
+(304, 1500, '204', 'cash');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Trainer`
+--
+
+CREATE TABLE `Trainer` (
+  `Trainer_id` int(20) NOT NULL,
+  `Name` varchar(40) NOT NULL,
+  `phone` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Trainer`
+--
+
+INSERT INTO `Trainer` (`Trainer_id`, `Name`, `phone`) VALUES
+(101, 'Rakesh', 12365489),
+(102, 'Ravi', 21365789),
+(103, 'wasim', 123564789),
+(104, 'Sameer', 12536987);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `doctorapp`
+--
+ALTER TABLE `doctorapp`
+  ADD PRIMARY KEY (`contact`);
+
+--
+-- Indexes for table `Package`
+--
+ALTER TABLE `Package`
+  ADD PRIMARY KEY (`Package_id`);
+
+--
+-- Indexes for table `Payment`
+--
+ALTER TABLE `Payment`
+  ADD PRIMARY KEY (`Payment_id`);
+
+--
+-- Indexes for table `Trainer`
+--
+ALTER TABLE `Trainer`
+  ADD PRIMARY KEY (`Trainer_id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+<!DOCTYPE html>
+<?php include("func.php");?>
+<html>
+<head>
+	<title>Members details</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron" style="background: url('images/2.jpg') no-repeat;background-size: cover;height: 300px;"></div>	
+
+ <div class="container">
+<div class="card">
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="row">
+             <div class="col-md-1">
+    <a href="admin-panel.php" class="btn btn-light ">Go Back</a>
+             </div>
+             <div class="col-md-3"><h3>Pcakage Details</h3></div>
+             <div class="col-md-8">
+         <form class="form-group" action="patient_search.php" method="post">
+          <div class="row">
+              
+                 </form></div></div></div>
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="card-body">
+    <table class="table table-hover">
+        <thead>
+     <tr>
+            <th>Package ID </th>
+            <th>Package Name</th>
+         <th>Amounts</th>
+         
+        </tr>   
+        </thead>
+        <tbody>
+          <?php get_package(); ?>
+        </tbody>
+    </table>
+    
+     </div>
+    </div>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </div>
+    </body>
+</html>
+<!DOCTYPE html>
+<?php include("func.php");?>
+<html>
+<head>
+	<title>Members details</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron" style="background: url('images/2.jpg') no-repeat;background-size: cover;height: 300px;"></div>	
+
+ <div class="container">
+<div class="card">
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="row">
+             <div class="col-md-1">
+    <a href="admin-panel.php" class="btn btn-light ">Go Back</a>
+             </div>
+             <div class="col-md-3"><h3>Payment Details</h3></div>
+             <div class="col-md-8">
+         <form class="form-group" action="patient_search.php" method="post">
+          <div class="row">
+              
+                 </form></div></div></div>
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="card-body">
+    <table class="table table-hover">
+        <thead>
+     <tr>
+            <th>Payment ID </th>
+            <th>Amount</th>
+            <th>Payment Type</th>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+         
+        </tr>   
+        </thead>
+        
+        <tbody>
+          <?php get_payment(); ?>
+        </tbody>
+    </table>
+    <div class="card-body" style="background-color:#3498DB;color:FFFFFF;">
+                <h3>Make new Payment</h3>
+                </div> 
+                <div class="card-body"></div>
+                <form class="form-group" action="func.php" method="post">
+                <label>Payment ID</label>
+<input type="text" name="Payment_id" class="form-control"><br>
+ 
+                    <label>Amount</label>
+                    <input type="text" name="Amount" class="form-control"><br>
+                    <label>Customer ID</label>
+                    <input type="text" name="customer_id" class="form-control"><br>
+                    <label>Customer Name</label>
+                    <input type="text" name="customer_name" class="form-control"><br>
+                    <label>Payment Type</label>
+                    
+<input type="text" name="payment_type" class="form-control"><br> 
+<input type="submit" class="btn btn-primary" name="pay_submit" value="PAY">
+     </div>
+    </div>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </div>
+    </body>
+</html>
+# gym-management
+Gym Management System provides an easy to use interface for the users and a database for the admin to maintain the records of gym members.
+
+## Screenshots
+### Login Page
+![login page](/images/login.png)
+### Members registration page
+![Members registration page](/images/member.png)
+
+<?php
+
+if (isset($_POST['submit'])) {
+	include_once 'dbh.inc.php';
+	
+	$first = mysqli_real_escape_string($conn, $_POST['first']);
+	$last = mysqli_real_escape_string($conn, $_POST['last']);
+	$email = mysqli_real_escape_string($conn, $_POST['email']);
+	$uid = mysqli_real_escape_string($conn, $_POST['uid']);
+	$pwd = mysqli_real_escape_string($conn, $_POST['pwd'])  ;
+	
+	//error handlers
+	//check for empty fields
+	
+	if (empty($first) || empty($last) || empty($email)|| empty($uid)|| empty($pwd) ) 
+	{
+	    header("Location: ../signup.php?signup=empty");
+	    exit();
+	
+	} else {
+		//check if input character are valid
+		if(!preg_match("/^[a-zA-Z]*$/", $first) || !preg_match("/^[a-zA-Z]*$/", $last)){
+        
+		    header("Location: ../signup.php?signup=invalid");
+	         exit();
+           } else {
+			   //check if email is valid
+			   if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+				   
+				   header("Location: ../signup.php?signup=email");
+	               exit();
+			   }
+			   else {
+				   $sql = "SELECT * FROM users WHERE user_uid='$uid'";
+				   $result = mysqli_query($conn, $sql);
+				   $resultCheck = mysqli_num_rows($result);
+				   
+				   if($resultCheck > 0) {
+					 header("Location: ../signup.php?signup=usertaken");
+	                  exit();   
+				   }
+				   else {
+					   //hashing the password
+					   $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+					   //insert the user into database
+					   $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$first', '$last', '$email', '$uid', '$hashedPwd');";
+					   mysqli_query($conn, $sql);
+					   header("Location: ../signup.php?signup=success");
+	                  exit();  
+					   
+				   }
+			   }   
+			   
+		   }
+	}
+} else {
+	header("Location: ../signup.php");
+	exit();
+	
+}
+
+ 
+<?php 
+     include_once 'header.php';
+?>	 
+	 
+<section class="main-container">
+     <div class="main-wrapper">
+	    <h2>signup</h2>
+		<form class="signup-form" action="includes/signup.inc.php" method="POST">
+		    <input type="text" name="first" placeholder="firstname">
+			<input type="text" name="last" placeholder="lastname">
+			<input type="text" name="email" placeholder="e-mail">
+			<input type="text" name="uid" placeholder="username">
+			<input type="password" name="pwd" placeholder="password">
+	 	    <button type="submit" name="submit">sign up</button>
+	    </form>
+	 </div>	
+</section>
+<?php
+    include_once 'footer.php';
+?>	
+  
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*my code*/
+
+.main-wrapper{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+a {
+	text-decoration: none;
+}
+
+body{
+	background-color: #ccc;
+}
+
+header nav{
+	width: 100%; 
+	height: 60px;
+	background-color: #fff;
+}
+
+header nav ul {
+	float:left;
+}
+
+
+header nav ul li{
+	float:left;
+	list-style:none;
+}
+
+header nav ul li a {
+	font-family: arial;
+	font-size: 20 px;
+	color: #111;
+	line-height: 63px;
+}
+
+header .nav-login {
+	float: right;
+}
+
+
+header .nav-login form {
+	float: left;
+	padding-top: 15px;
+}
+
+header .nav-login form input {
+	float: left; 
+	width: 140px;
+	height: 30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	border: none;
+	background-color: #ccc;
+	font-family: arial;
+	font-size: 14px;
+	color: #111;
+	line-height: 30px; 
+	
+}
+
+header .nav-login form button {
+	float: left;
+	width: 60px;
+	height: 30px;
+	margin-right: 10px;
+	border: none;
+	background-color: #f3f3f3;
+	font-family: arial;
+	font-size: 14px;
+	color: #111;
+	cursor: pointer;
+	
+}
+
+header .nav-login form button:hover {
+	 
+	 background-color: #ccc;
+}
+
+
+header .nav-login a {
+	display: block;
+	width:30px;
+	height: 30px;
+	 border: none;
+	 float: left;
+	 background-color: #fff;
+	font-family: arial;
+	font-size: 16px;
+	color: #111;
+	line-height: 63px;
+    cursor: pointer;
+}   
+
+.main-container{
+	padding-top: 40px;
+}	
+
+.main-container h2{
+	font-family: arial;
+	font-size: 40px;
+	color: #111;
+	line-height: 50px;
+	text-align: center;
+	
+}	 
+  
+/* signup.php*/ 
+
+.signup-form {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 30px;
+} 
+
+.signup-form input {
+	  
+	width: 90%;
+	height: 40px;
+	padding: 0px 5%;
+	margin-bottom: 4px;
+	border: none;
+	background-color: #fff;
+	font-family: arial;
+	font-size: 16px;
+	color: #111;
+	line-height: 40px;
+}  
+
+.signup-form button {
+	display: block;  
+	margin: 0 auto;
+	width: 30%;
+	height: 40px;
+	border: none;
+	background-color: #222;
+	font-family: arial;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.signup-form button:hover {
+	background-color: #111;
+
+}
+
+
+	  
+	
+
+ 
+   
+
+<!DOCTYPE html>
+<?php include("func.php");?>
+<html>
+<head>
+	<title>Members details</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron" style="background: url('images/2.jpg') no-repeat;background-size: cover;height: 300px;"></div>	
+
+ <div class="container">
+<div class="card">
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="row">
+             <div class="col-md-1">
+    <a href="admin-panel.php" class="btn btn-light ">Go Back</a>
+             </div>
+             <div class="col-md-3"><h3> Trainer Information</h3></div>
+             <div class="col-md-8">
+         <form class="form-group" action="patient_search.php" method="post">
+          <div class="row">
+   
+                         
+                 </form></div></div></div>
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="card-body">
+    <table class="table table-hover">
+        <thead>
+     <tr>
+            <th>Trainer ID</th>
+            <th>Name</th>
+         <th>Phone</th>
+         
+        </tr>   
+        </thead>
+        <tbody>
+          <?php get_trainer(); ?>
+        </tbody>
+    </table>
+    <div class="card-body" style="background-color:#3498DB;color:FFFFFF;">
+                <h3>Register new Trainer</h3>
+                </div> 
+                <div class="card-body"></div>
+                <form class="form-group" action="func.php" method="post">
+                <label>Trainer ID</label>
+<input type="text" name="Trainer_id" class="form-control"><br>
+ <label>Name</label>
+                    <input type="text" name="Name" class="form-control"><br>
+                    <label>Phone</label>
+<input type="text" name="phone" class="form-control"><br> 
+<input type="submit" class="btn btn-primary" name="tra_submit" value="Register">
+     </div>
+    </div>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </div>
+    </body>
+</html>
+<!DOCTYPE html>
+<?php include("func.php");?>
+<html>
+<head>
+	<title>Members details</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron" style="background: url('images/2.jpg') no-repeat;background-size: cover;height: 300px;"></div>	
+
+ <div class="container">
+<div class="card">
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="row">
+             <div class="col-md-1">
+    <a href="admin-panel.php" class="btn btn-light ">Go Back</a>
+             </div>
+             <div class="col-md-3"><h3>Members Details</h3></div>
+             <div class="col-md-8">
+         <form class="form-group" action="trainer_search.php" method="post">
+          <div class="row">
+   <div class="col-md-10"><input type="text" name="search" class="form-control" placeholder="enter contact"></div>
+              <div class="col-md-2"><input type="submit" name="patient_search_submit" class="btn btn-light" value="Search"> </div></div>           
+                 </form></div></div></div>
+     <div class="card-body" style="background-color:#3498DB;color:#ffffff;">
+         <div class="card-body">
+    <table class="table table-hover">
+        <thead>
+     <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+         <th>Email id</th>
+         <th>Member ID</th>
+         <th>Trainer ID</th>
+        </tr>   
+        </thead>
+        <tbody>
+          <?php get_patient_details(); ?>
+        </tbody>
+    </table>
+     </div>
+    </div>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </div>
+    </body>
+</html>
+<html>
+<head>
+	<title>Patient details</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body>
+    <?php
+include("func.php");
+if(isset($_POST['patient_search_submit']))
+{
+    $contact=$_POST['search'];
+     $query="select * from doctorapp where contact='$contact'";
+    $result=mysqli_query($con,$query);
+    echo "<div class='container-fluid' style='margin-top:50px;'>
+    <div class'card'>
+    <div class='card-body'><a href='trainer_details.php' class='btn brn-light'>Go Back</a></div>
+    <img src='images/1.jpg'>
+    <table class='table table-hover'>
+        <thead>
+     <tr>
+            <th>First name</th>
+            <th>Last name</th>
+         <th>Email id</th>
+         <th>Contact</th>
+         <th>Trainer ID</th>
+        </tr>   
+        </thead>
+        <tbody>
+        </div></div>";
+    while ($row=mysqli_fetch_array($result)){
+          $fname=$row ['fname'];
+    $lname=$row['lname'];
+    $email=$row['email'];
+    $contact=$row['contact'];
+    $docapp=$row ['docapp'];
+        echo " <tr>
+        <td>$fname</td>
+        <td>$lname</td>
+        <td>$email</td>
+        <td>$contact</td>
+        <td>$docapp</td>
+        </tr>";
+        }
+        echo "</tbody></table></div></div></div>";
+}
+    ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body>
+        </html> 
+<!DOCTYPE html>
+<?php
+
+// php select option value from database
+
+$hostname = "localhost";
+$username = "root";
+$password = "";
+$databaseName = "loginsystem";
+
+// connect to mysql database
+
+$connect = mysqli_connect($hostname, $username, $password, $databaseName);
+
+// mysql select query
+$query = "SELECT * FROM `Trainer`";
+
+// for method 1
+
+$result1 = mysqli_query($connect, $query);
+
+
+
+?>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  </head>
+  <body>
+      
+   
+       
+ <div class="jumbotron" style="border-radius:0;background:url('images/3.jpg');background-size:cover;height:400px;"></div>
+   <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="" class="list-group-item active"
+                   >Members</a>
+                <a href="trainer_details.php" class="list-group-item">Member details</a>
+                <a href="package.php" class="list-group-item">Package details</a>
+                <a href="payment.php" class="list-group-item">Payments</a>
+            </div>
+            <hr>
+            <div class="list-group">
+              <a href="trainer.php" class="list-group-item active">Trainer</a>
+              <a href="trainer.php" class="list-group-item active">Trainer details</a>             
+              <a href="trainer.php" class="list-group-item active">Add new Trainer</a>
+            </div>      
+            
+        </div>
+            <div class="col-md-8">
+            <div class="card">
+                
+     <div class="card-body" style="background-color:#3498DB;color:FFFFFF;">
+                <h3>Register new members</h3>
+                </div> 
+                <div class="card-body"></div>
+                <form class="form-group" action="func.php" method="post">
+                <label>first name:</label>
+<input type="text" name="fname" class="form-control"><br>
+                    <label>last name:</label>
+<input type="text" name="lname" class="form-control"><br> 
+ <label>email</label>
+                    <input type="text" name="email" class="form-control"><br>
+                    <label>Member ID</label>
+<input type="text" name="contact" class="form-control"><br>        
+ <label>Trainer </label> 
+ <select class="form-control" name="docapp">
+
+            <?php while($row1 = mysqli_fetch_array($result1)):;?>
+
+            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?></option>
+
+            <?php endwhile;?>
+
+        </select>
+        <br>
+                                        
+  <input type="submit" class="btn btn-primary" name="pat_submit" value="Register">                  <a href="func.php" class="btn btn-light"></a>
+                    
+                    
+                </form>
+                </div>
+      </div>
+       </div>
+      <div class="col-md-1"></div>
+      </div>
+    <header>
+ <nav>
+     <div class="main-wrapper">
+	      
+		       <div class="nav-login">
+			       <?php
+				        if (isset($_SESSION['u_id'])) {
+						  echo '<form action="includes/index.php" method="POST">
+					            <button type="submit" name="submit">logout</button>
+					              </form>';	
+                                 } else{
+							
+							echo '<form action="includes/index.php" method="POST">
+                              
+                               						
+				                </form>
+				              <a href="index.php" class="btn btn-light" style="background-color:#3498DB;color:FFFFFF">Logout</a>';
+							
+						}
+				   
+				    ?>
+					
+				
+		       </div>
+	 </div>
+ </nav>
+
+</header>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+     </body>
+    
+</html>
+   
+<?php
+$con=mysqli_connect("localhost","root","","loginsystem");
+if(isset($_POST['login_submit'])){
+	$username=$_POST['username'];
+	$password=$_POST['password'];
+	$query="select * from logintb where username='$username' and password='$password'";
+	$result=mysqli_query($con,$query);
+	if(mysqli_num_rows($result)==1)
+	{
+		header("Location:admin-panel.php");
+	
+}
+	else
+    {
+        echo "<script>alert('error login')</script>";
+        echo "<script>window.open('admin-panel.php','_self')</script>";
+    }
+    }
+if(isset($_POST['pat_submit']))
+{
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $email=$_POST['email'];
+    $contact=$_POST['contact'];
+    $docapp=$_POST['docapp'];
+    $query="insert into doctorapp(fname,lname,email,contact,docapp)values('$fname','$lname','$email','$contact','$docapp')";
+     $result=mysqli_query($con,$query);
+    if($result)
+    {
+      echo "<script>alert('Member added.')</script>";
+        echo "<script>window.open('admin-panel.php','_self')</script>";
+    }
+    } 
+    if(isset($_POST['tra_submit']))
+    {
+        $Trainer_id=$_POST['Trainer_id'];
+        $Name=$_POST['Name'];
+        $phone=$_POST['phone'];
+        $query="insert into Trainer(Trainer_id,Name,phone)values('$Trainer_id','$Name','$phone')";
+         $result=mysqli_query($con,$query);
+        if($result)
+        {
+          echo "<script>alert('Trainer added.')</script>";
+            echo "<script>window.open('admin-panel.php','_self')</script>";
+        }
+        } 
+        if(isset($_POST['pay_submit']))
+        {
+            $Payment_id=$_POST['Payment_id'];
+            $Amount=$_POST['Amount'];
+            $customer_id=$_POST['customer_id'];
+            $payment_type=$_POST['payment_type'];
+            $customer_name=$_POST['customer_name'];
+            $query="insert into Payment(Payment_id,Amount,customer_id,payment_type,customer_name)values('$Payment_id','$Amount','$customer_id','$payment_type','$customer_name')";
+             $result=mysqli_query($con,$query);
+            if($result)
+            {
+              echo "<script>alert('Payment sucessfull.')</script>";
+                echo "<script>window.open('admin-panel.php','_self')</script>";
+            }
+            } 
+ function get_patient_details(){
+    global $con;
+    $query="select * from doctorapp";
+    $result=mysqli_query($con,$query);
+    while ($row=mysqli_fetch_array($result)){
+         $fname=$row ['fname'];
+    $lname=$row['lname'];
+    $email=$row['email'];
+    $contact=$row['contact'];
+    $docapp=$row['docapp'];
+      echo "<tr>
+          <td>$fname</td>
+        <td>$lname</td>
+            <td>$email</td>
+            <td>$contact</td>
+          <td>$docapp</td>
+        </tr>";
+    }
+}
+function get_package(){
+    global $con;
+    $query="select * from Package";
+    $result=mysqli_query($con,$query);
+    while($row=mysqli_fetch_array($result)){
+        $Package_id=$row ['Package_id'];
+        $Package_name=$row['Package_name'];
+        $Amount=$row['Amount'];
+        echo"<tr>
+        <td>$Package_id</td>
+        <td>$Package_name</td>
+            <td>$Amount</td>
+            
+        </tr>";
+
+    }
+}
+function get_trainer(){
+    global $con;
+    $query="select * from Trainer";
+    $result=mysqli_query($con,$query);
+    while($row=mysqli_fetch_array($result)){
+        $Trainer_id=$row ['Trainer_id'];
+        $Name=$row['Name'];
+        $phone=$row['phone'];
+        echo"<tr>
+        <td>$Trainer_id</td>
+        <td>$Name</td>
+            <td>$phone</td>
+            
+        </tr>";
+
+    }
+}
+function get_payment(){
+    global $con;
+    $query="select * from Payment";
+    $result=mysqli_query($con,$query);
+    while($row=mysqli_fetch_array($result)){
+        $Payment_id=$row ['Payment_id'];
+        $Amount=$row['Amount'];
+        $payment_type=$row['payment_type'];
+        $customer_id=$row['customer_id'];
+        $customer_name=$row['customer_name'];
+        
+        echo"<tr>
+        <td>$Payment_id</td>
+        <td>$Amount</td>
+        <td>$payment_type</td>
+        <td>$customer_id</td>
+        <td>$customer_name</td>
+            </tr>";
+
+    }
+}
+
+
+?>
+
+
+
+
+<?php
+include_once 'admin-panel.php';
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title> </title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+
+<header>
+ <nav>
+     <div class="main-wrapper">
+	      <ul>
+	            <li><a href="index.php">home</a></li>
+	       </ul>
+		       <div class="nav-login">
+			       <?php
+				        if (isset($_SESSION['u_id'])) {
+						  echo '<form action="includes/logout.inc.php" method="POST">
+					            <button type="submit" name="submit">logout</button>
+					              </form>';	
+   
+							
+			            } else{
+							
+							echo '<form action="includes/login.inc.php" method="POST">
+                              <input type="text" name="uid" placeholder="username/e-mail">
+                              <input type="password" name="pwd" placeholder="password">
+                               <button type="submit" name="submit">login</button>						
+				                </form>
+				               <a href="signup.php">signup</a>';
+							
+						}
+				   
+				    ?>
+					
+				
+		       </div>
+	 </div>
+ </nav>
+
+</header>
